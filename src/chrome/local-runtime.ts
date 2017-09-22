@@ -1,3 +1,4 @@
+import * as AWS from 'aws-sdk'
 import {
   Client,
   Command,
@@ -7,6 +8,10 @@ import {
   PdfOptions,
   ScreenshotOptions,
 } from '../types'
+import * as cuid from 'cuid'
+import * as fs from 'fs'
+import * as os from 'os'
+import * as path from 'path'
 import {
   nodeExists,
   wait,
